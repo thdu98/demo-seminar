@@ -49,7 +49,7 @@ public class JDBCSingerRepository implements SingerRepository {
 
 	@Override
 	public void saveSinger(Singer singer) {
-		String sql = "insert into song (id_song, name_song) value (?,?)";
+		String sql = "insert into singer (id_singer, name_singer) values (?,?)";
 		jdbcTemplate.update(sql, singer.getIDSinger(), singer.getNameSinger());
 	}
 
